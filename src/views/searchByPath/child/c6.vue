@@ -1,0 +1,43 @@
+<template>
+<div class="c6">
+  <div class="Input">
+    <span> 换乘线路 </span>
+    <input autocomplete="off" placeholder="请输入按方向线路,如'2路上行'" data-action="input">
+  </div>
+</div>
+</template>
+
+<script>
+export default {
+  name: "c6"
+}
+</script>
+
+<style scoped>
+.c6{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.c6 span{
+  font-family: Helvetica;
+}
+.c6 input {
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  padding: 10px;
+  height: 100%;
+  width: 65%;
+  line-height: 22px;
+  vertical-align: middle;
+  cursor: auto;
+  outline: none;
+}
+  input::-webkit-input-placeholder{
+  font-family: "Heiti SC";
+  color: #d8d8d8;
+}
+</style>
