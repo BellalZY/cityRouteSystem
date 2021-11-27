@@ -28,6 +28,7 @@
         <search-button :state="state1" v-on:searchEvent="changeValue"></search-button>
       </div>
     </div>
+    <img src="../../../public/img.png" alt="" />
     <div class="showResult">
       <component :is="currentState2" :state="state1" v-on:resultEvent="changeValue"></component>
     </div>
@@ -188,6 +189,12 @@ export default {
   left:80%;
   width:20%;
   height: 100%;
+}
+.Path img{
+  position: absolute;
+  top: 10%;
+  left: 70%;
+  height: 35%;
 }
 .showResult{
   position: absolute;
