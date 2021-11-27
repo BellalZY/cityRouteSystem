@@ -6,6 +6,12 @@
         <div slot="name">{{item.name}}</div>
         <div slot="english">{{item.english}}</div>
       </station>
+      <div v-if="index !== data.length-1">
+        <img src="../../../assets/img/next.svg" alt="" />
+      </div>
+      <div v-else v-for="i in 2" :key="i">
+        <img src="../../../assets/img/next.svg" alt="" />
+      </div>
     </div>
   </div>
 </template>
@@ -17,9 +23,42 @@ export default {
   components:{
     station
   },
+  props:{
+    state:Boolean
+  },
   data(){
     return{
-      data:[{id:1,name:"莲桂西路",english:"lianguixilu"},{id:2,name:"莲花一区",english:"lianhuayiqu"},{id:3,name:"海椒市",english:"haijiaoshi"}]
+      data:[],
+      searchWord3:"",
+      searchWord4:"",
+    }
+  },
+  watch:{
+    state(){
+      this.searchWord3 = this.$store.state.searchWord3
+      this.searchWord4 = this.$store.state.searchWord4
+      var that = this
+      if(this.state){
+        this.$axios.get("/api/station/getSameStations",
+          {
+            params: {
+              "routeName1": that.searchWord3,
+              "routeName2": that.searchWord4
+            }
+          })
+          .then((res) => {
+            if (res != null){
+              this.isState = true
+              that.data = res.data;
+              console.log(that.data)
+              this.state = false;
+              this.$emit('resultEvent',this.state)
+            }
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      }
     }
   }
 }

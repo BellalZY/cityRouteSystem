@@ -35,20 +35,41 @@ export default {
   components:{
   showTable1,showTable2,showTable2Active
   },
+  props:{
+    state:Boolean
+  },
   data(){
     return{
-      data:{
-        "name":["1","2","3"],
-        "name2":["1","2","3"],
-        "name3":["1","2","3"],
-        "name4":["1","2","3"],
-        "name5":["1","2","3"],
-        "name6":["1","2","3"],
-        "name7":["1","2","3"],
-        "name8":["1","2","3"],
+      data:{},
+      searchWord:"",
+    }
+  },
+  watch:{
+    state(){
+      this.searchWord = this.$store.state.searchWord3
+      console.log(this.searchWord)
+      const that = this;
+      if(this.state){
+        this.$axios.get("/api/route/getTransferLines",
+          {
+            params: {
+              "route": this.searchWord
+            }
+          })
+          .then((res) => {
+            if (res != null){
+              console.log(res)
+              that.data = res.data
+              this.state = false;
+              this.$emit('resultEvent',this.state)
+            }
+          })
+          .catch((error) => {
+            console.log(error);
+          });
       }
     }
-  }
+  },
 }
 </script>
 
@@ -57,6 +78,6 @@ export default {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
 }
 </style>

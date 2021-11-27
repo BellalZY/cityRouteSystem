@@ -2,14 +2,24 @@
 <div class="c6">
   <div class="Input">
     <span> 换乘线路 </span>
-    <input autocomplete="off" placeholder="请输入按方向线路,如'2路上行'" data-action="input">
+    <input autocomplete="off" placeholder="请输入按方向线路,如'2路上行'" data-action="input" v-model="value">
   </div>
 </div>
 </template>
 
 <script>
 export default {
-  name: "c6"
+  name: "c6",
+  data(){
+    return{
+      value:""
+    }
+  },
+  watch:{
+    value(){
+      this.$store.commit('setSearchWord3',this.value)
+    }
+  }
 }
 </script>
 

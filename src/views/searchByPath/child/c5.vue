@@ -2,18 +2,32 @@
 <div class="c5">
   <div class="Input1">
     <span> 班号1 </span>
-    <input autocomplete="off" placeholder="请输入线路号,如'30'" data-action="input">
+    <input autocomplete="off" placeholder="请输入按方向线路,如'2路上行'" v-model="value1" data-action="input">
   </div>
   <div class="Input2">
     <span> 班号2 </span>
-    <input autocomplete="off" placeholder="请输入线路号,如'30'" data-action="input">
+    <input autocomplete="off" placeholder="请输入按方向线路,如'2路上行'" v-model="value2" data-action="input">
   </div>
 </div>
 </template>
 
 <script>
 export default {
-  name: "c5"
+  name: "c5",
+  data(){
+    return{
+      value1:"",
+      value2:""
+    }
+  },
+  watch:{
+    value1(){
+      this.$store.commit('setSearchWord3',this.value1)
+    },
+    value2(){
+      this.$store.commit('setSearchWord4',this.value2)
+    }
+  }
 }
 </script>
 
