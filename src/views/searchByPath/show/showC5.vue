@@ -6,12 +6,6 @@
         <div slot="name">{{item.name}}</div>
         <div slot="english">{{item.english}}</div>
       </station>
-      <div v-if="index !== data.length-1">
-        <img src="../../../assets/img/next.svg" alt="" />
-      </div>
-      <div v-else v-for="i in 2" :key="i">
-        <img src="../../../assets/img/next.svg" alt="" />
-      </div>
     </div>
   </div>
 </template>
