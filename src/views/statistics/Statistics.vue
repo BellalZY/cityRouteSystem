@@ -44,7 +44,7 @@ export default {
       isActive: 1,
       state1: false,
       isActiveComp:['c1','c2','c3'],
-      isActiveComp2:['ShowC1','ShowC2','ShowC3'],
+      isActiveComp2:['showC1','showC2','showC3'],
     }
   },
   computed:{
