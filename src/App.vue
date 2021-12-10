@@ -5,7 +5,10 @@
         <h>统计数据</h>
       </div>
       <div class="sortDelete" :class={active:isActiveSD} @click="gotoSort">
-        <h>排序删除</h>
+        <h>排序查询</h>
+      </div>
+      <div class="time" :class={active:isActiveT} @click="gotoTime">
+        <h>时间查询</h>
       </div>
       <div class="station" :class={active:isActiveST} @click="gotoStation">
         <h>站点查询</h>
@@ -34,6 +37,9 @@ export default {
     isActiveSD(){
       return this.$route.path.indexOf("/sortAndDelete") !== -1;
     },
+    isActiveT(){
+      return this.$route.path.indexOf("/searchByTime") !== -1;
+    },
     isActiveST(){
       return this.$route.path.indexOf("/searchByStation") !== -1;
     },
@@ -47,6 +53,9 @@ export default {
     },
     gotoSort(){
       this.$router.push('/sortAndDelete');
+    },
+    gotoTime(){
+      this.$router.push('/searchByTime')
     },
     gotoStation(){
       this.$router.push('/searchByStation');
@@ -63,6 +72,7 @@ export default {
 @import "./assets/css/base.css";
 @media screen and (max-width: 768px) {
   #app {
+    background: url("assets/img/catcat.jpeg");
     height: 100%;
     width: 100%;
     font-size: 0.5rem;
@@ -71,11 +81,15 @@ export default {
 /* 笔记本电脑的字体大小 */
 @media screen and (min-width: 768px) {
   #app {
+    position: absolute;
+    background-image: url("assets/img/newcat(1).png");
+    background-size: 50% 100%;
     height: 100%;
     width: 100%;
     font-size: 1.5rem;
     font-family: oppo;
     overflow: scroll;
+    z-index: -1;
   }
 }
 .title{
@@ -98,14 +112,19 @@ export default {
   right: 20%;
   top: 30%;
 }
-.station{
+.time{
   position: absolute;
   right: 30%;
   top: 30%;
 }
-.path{
+.station{
   position: absolute;
   right: 40%;
+  top: 30%;
+}
+.path{
+  position: absolute;
+  right: 50%;
   top: 30%;
 }
 .active{

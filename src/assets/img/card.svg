@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg t="1638955964996" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+     p-id="19746" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="128">
+  <defs>
+    <style type="text/css"></style>
+  </defs>
+  <path
+    d="M831.8 374.6H192.2c-25.6 0-46.3-20.7-46.3-46.3s20.7-46.3 46.3-46.3h639.6c25.6 0 46.3 20.7 46.3 46.3s-20.7 46.3-46.3 46.3z"
+    fill="#167BBD" opacity=".8" p-id="19747"></path>
+  <path
+    d="M192.2 793.2c-25.6 0-46.3-20.7-46.3-46.3V328.3c0-25.6 20.7-46.3 46.3-46.3 25.6 0 46.3 20.7 46.3 46.3v418.6c0 25.6-20.7 46.3-46.3 46.3z"
+    fill="#167BBD" opacity=".8" p-id="19748"></path>
+  <path
+    d="M831.8 793.2c-25.6 0-46.3-20.7-46.3-46.3V328.3c0-25.6 20.7-46.3 46.3-46.3 25.6 0 46.3 20.7 46.3 46.3v418.6c0 25.6-20.7 46.3-46.3 46.3z"
+    fill="#167BBD" opacity=".8" p-id="19749"></path>
+  <path
+    d="M831.8 793.2H192.2c-25.6 0-46.3-20.7-46.3-46.3s20.7-46.3 46.3-46.3h639.6c25.6 0 46.3 20.7 46.3 46.3s-20.7 46.3-46.3 46.3z"
+    fill="#167BBD" opacity=".8" p-id="19750"></path>
+  <path d="M659 464.2m-68 0a68 68 0 1 0 136 0 68 68 0 1 0-136 0Z" fill="#167BBD" opacity=".8" p-id="19751"></path>
+</svg>

@@ -1,25 +1,25 @@
 <template>
-<div class="c3">
-  <div class="Input1">
-    <span> 班号信息 </span>
-    <input autocomplete="off" placeholder="请输入线路号,如'30'" data-action="input" v-model="value1">
+  <div class="c1">
+    <div class="Input1">
+      <span> 时刻 </span>
+      <input autocomplete="off" placeholder="请输入具体时刻,如'08:37'" data-action="input" v-model="value1">
+    </div>
+    <div class="Input2">
+      <span> 站台ID </span>
+      <input autocomplete="off" placeholder="请输入站点ID,如'16147'" data-action="input" v-model="value2">
+    </div>
+    <div class="Input3">
+      <span> 时段 </span>
+      <input autocomplete="off" placeholder="请输入一个时段,如'5'" data-action="input" v-model="value3">
+    </div>
   </div>
-  <div class="Input2">
-    <span> 起始站 </span>
-    <input autocomplete="off" placeholder="请输入站点名,如'大悦城'" data-action="input" v-model="value2">
-  </div>
-  <div class="Input3">
-    <span> 到达站 </span>
-    <input autocomplete="off" placeholder="请输入站点名,如'小吃街'" data-action="input" v-model="value3">
-  </div>
-</div>
 </template>
 
 <script>
 export default {
-  name: "c3",
+  name: "c1",
   data(){
-      return{
+    return{
       value1:"",
       value2:"",
       value3:""
@@ -40,7 +40,7 @@ export default {
 </script>
 
 <style scoped>
-.c3{
+.c1{
   position: absolute;
   height: 100%;
   width: 100%;
@@ -48,10 +48,10 @@ export default {
   flex-direction: column;
   justify-content: space-around;
 }
-.c3 span{
+.c1 span{
   font-family: Helvetica;
 }
-.c3 input {
+.c1 input {
   border: 1px solid #d8d8d8;
   border-radius: 5px;
   padding: 10px;
@@ -62,7 +62,7 @@ export default {
   cursor: auto;
   outline: none;
 }
-  input::-webkit-input-placeholder{
+input::-webkit-input-placeholder{
   font-family: "Heiti SC";
   color: #d8d8d8;
 }

@@ -1,7 +1,5 @@
 <template>
-  <div class="c2">
 
-  </div>
 </template>
 
 <script>

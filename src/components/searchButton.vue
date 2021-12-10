@@ -1,6 +1,11 @@
 <template>
   <div class="searchButton">
-    <input type="submit" value="立即查询" @click="search">
+    <div v-if="currentState == 'showC33'">
+      <input type="submit" value="立即删除" @click="search">
+    </div>
+    <div v-else>
+      <input type="submit" value="立即查询" @click="search">
+    </div>
   </div>
 </template>
 
@@ -8,10 +13,12 @@
 export default {
   name: "searchButton",
   props:{
-    state:Boolean
+    state:Boolean,
+    currentState:String
   },
   methods:{
     search(){
+      console.log(this.currentState)
       this.state = true;
       this.$emit('searchEvent',this.state)
     }
